@@ -1,7 +1,7 @@
 resource "aws_security_group" "ALLOW-SSH" {
   name        = "ALLOW-SSH"
   description = "Allow SSH traffic"
-  vpc_id      = "${aws_vpc.DG-VPC.id}"
+  vpc_id      = "${aws_vpc.VPC.id}"
 
   ingress {
     from_port   = 22
@@ -21,7 +21,7 @@ resource "aws_security_group" "ALLOW-SSH" {
 resource "aws_security_group" "ALLOW-JENKINS" {
   name        = "ALLOW-JENKINS"
   description = "Allow Jenkins port"
-  vpc_id      = "${aws_vpc.DG-VPC.id}"
+  vpc_id      = "${aws_vpc.VPC.id}"
 
   ingress {
     from_port   = 8080
