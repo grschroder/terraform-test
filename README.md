@@ -17,4 +17,4 @@ provider "aws" {
 
 
 * Run terraform init.
-* Run terraform apply
+* Run terraform apply.
