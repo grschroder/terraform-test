@@ -10,3 +10,6 @@
 
 # Provider
 provider.tf
+
+# .exe
+terraform.exe
