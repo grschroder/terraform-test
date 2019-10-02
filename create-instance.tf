@@ -20,7 +20,7 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
-resource "aws_instance" "app-srv" {
+resource "aws_instance" "web-srv" {
   ami           = "${data.aws_ami.ubuntu.id}"
   #instance_type = "t2.medium"
   instance_type = "t2.micro"
@@ -32,6 +32,6 @@ resource "aws_instance" "app-srv" {
   ]
 
   tags = {
-    Name = "app-srv"
+    Name = "web-srv"
   }
 }
